@@ -58,6 +58,48 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
     evn.preventDefault();
     $('html,body').scrollTo(this.hash, this.hash); 
   });
+
+  var leftMissionTimeLine = new TimelineMax();
+  var leftFrom = TweenMax.from(".mission", 1, {
+      x: -500
+  });
+  var leftTo = TweenMax.to(".mission", 1, {
+      x: 0
+  });
+  leftMissionTimeLine
+      .add(leftFrom)
+      .add(leftTo);
+
+  new ScrollMagic.Scene({
+        triggerElement: "#arts",
+        offset: 200,
+    })
+    .setTween(leftMissionTimeLine)
+    .duration(400)
+    //.reverse(false)
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+  var leftEducation = new TimelineMax();
+  var leftEdFrom = TweenMax.from(".education", 1, {
+      x: -500
+  });
+  var leftEdTo = TweenMax.to(".education", 1, {
+      x: 0
+  });
+  leftEducation
+      .add(leftEdFrom)
+      .add(leftEdTo);
+
+  new ScrollMagic.Scene({
+        triggerElement: "#fart",
+        offset: 200,
+    })
+    .setTween(leftEducation)
+    .duration(400)
+    //.reverse(false)
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
   
   
 })
