@@ -27,13 +27,85 @@ a {
 
 
 }
-#art{
-  background-color: black;
-  height: 100vh;
+#arts{
+background: url('/images/largePitcher.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
   
 }
+/*#art1{
+  background: url('/images/malcolmD.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   height: 100vh;
+  width: 100vh;
+}
+#art2{
+ background: url('/images/largeBowl.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   height: 100vh;
+  width: 100vh;
+}
+#art3{
+  background: url('/images/largeBowl2.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   height: 100vh;
+  width: 100vh;
+}
+#art4{
+ background: url('/images/largeBowl3.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   height: 100vh;
+  width: 100vh;
+}*/
+
 #fart{
-  background: url('/images/yule.jpg')no-repeat center fixed; 
+  background: url('/images/largeBowl.png')no-repeat center fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  
+ 
+}
+#about{
+/*  background-color: rgb(144,206,183);
+  height:100vh;*/
+  background: url('/images/largeBowl3.png')no-repeat center fixed; 
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -44,10 +116,4 @@ a {
 
   width: 100%; 
   max-width: 1920px; 
-  
- 
-}
-#about{
-  background-color: rgb(144,206,183);
-  height:100vh;
 }
