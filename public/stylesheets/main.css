@@ -4,7 +4,15 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #b74e27;
+}
+
+a:hover{
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
 }
 #home{
   background: url('/images/malcolmD.png')no-repeat center fixed; 
@@ -79,4 +87,7 @@ background: url('/images/largePitcher.png')no-repeat center fixed;
 
   width: 100%; 
   max-width: 1920px; 
+}
+#contact{
+  padding-top: 10vh;
 }

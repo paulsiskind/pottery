@@ -4,13 +4,10 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
     evn.preventDefault();
     $('html,body').scrollTo(this.hash, this.hash); 
   });
+  
+  TweenMax.from(".intro h1", 6, {x:100, scale:10, ease:Power4.easeInOut});
 
   var controller = new ScrollMagic.Controller();
-  
-
-  // .addIndicators() // for debugging purposes
- 
-  // .addIndicators() // for debugging purposes
 
   var fromLeftTimeline = new TimelineMax();
   var fromLeftFrom = TweenMax.from(".navbar", 1, {
@@ -29,30 +26,7 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
     })
     .setTween(fromLeftTimeline)
     .duration(800)
-    // .reverse(false)
-   // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
-
-  // var fromRightTimeline = new TimelineMax();
-  // var fromRightFrom = TweenMax.from(".contact", 1, {
-  //     x: 1600
-  // });
-  // var fromRightTo = TweenMax.to(".contact", 1, {
-  //     x: 0
-  // });
-  // fromRightTimeline
-  //     .add(fromRightFrom)
-  //     .add(fromRightTo);
-
-  // new ScrollMagic.Scene({
-  //       triggerElement: "#after",
-  //       offset: 200,
-  //   })
-  //   .setTween(fromRightTimeline)
-  //   .duration(400)
-  //   //.reverse(false)
-  //   // .addIndicators() // add indicators (requires plugin)
-  //   .addTo(controller); 
 
   $("nav a").click(function(evn){
     evn.preventDefault();
@@ -64,7 +38,7 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
       x: -500
   });
   var leftTo = TweenMax.to(".mission", 1, {
-      x: 0
+      x:0
   });
   leftMissionTimeLine
       .add(leftFrom)
@@ -72,12 +46,10 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
 
   new ScrollMagic.Scene({
         triggerElement: "#arts",
-        offset: 200,
+        offset: 50,
     })
     .setTween(leftMissionTimeLine)
-    .duration(400)
-    //.reverse(false)
-    // .addIndicators() // add indicators (requires plugin)
+    .duration(600)
     .addTo(controller);
 
   var leftEducation = new TimelineMax();
@@ -93,13 +65,9 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
 
   new ScrollMagic.Scene({
         triggerElement: "#fart",
-        offset: 200,
+        offset: 50,
     })
     .setTween(leftEducation)
-    .duration(400)
-    //.reverse(false)
-    // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
-  
-  
+    .duration(600)
+    .addTo(controller); 
 })
