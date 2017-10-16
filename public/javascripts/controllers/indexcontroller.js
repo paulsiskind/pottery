@@ -2,10 +2,15 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
 
   $("nav a").click(function(evn){
     evn.preventDefault();
-    $('html,body').scrollTo(this.hash, this.hash); 
-  });
-  
-  TweenMax.from(".intro h1", 6, {x:100, scale:10, ease:Power4.easeInOut});
+    $('html').scrollTo(this.hash, this.hash); 
+  })
+
+  // $("button").each(function(index, element){
+  //   $(this).click(function(){
+  //     TweenLite.to(window, 1, {scrollTo:{y:"#section" + (index+1), offsetY:70}});
+  //   })
+  // })   
+  TweenMax.to(".intro h1", 6, {x:100, ease:Power4.easeOutIn});
 
   var controller = new ScrollMagic.Controller();
 
@@ -49,7 +54,7 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
         offset: 50,
     })
     .setTween(leftMissionTimeLine)
-    .duration(600)
+    .duration(800)
     .addTo(controller);
 
   var leftEducation = new TimelineMax();
@@ -68,6 +73,25 @@ app.controller("IndexController", function($scope, $http, $location,  $routePara
         offset: 50,
     })
     .setTween(leftEducation)
+    .duration(600)
+    .addTo(controller); 
+
+  var leftContact = new TimelineMax();
+  var leftContactFrom = TweenMax.from(".contact", 1, {
+      x: -500
+  });
+  var leftContactTo = TweenMax.to(".contact", 1, {
+      x: 0
+  });
+  leftContact
+      .add(leftContactFrom)
+      .add(leftContactTo);
+
+  new ScrollMagic.Scene({
+        triggerElement: "#about",
+        offset: 50,
+    })
+    .setTween(leftContact)
     .duration(600)
     .addTo(controller); 
 })

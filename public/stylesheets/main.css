@@ -72,6 +72,7 @@ background: url('/images/largePitcher.png')no-repeat center fixed;
 }
 .education{
   padding-top: 5vh;
+  position-left:0vh;
 }
 #about{
 /*  background-color: rgb(144,206,183);
